@@ -13,6 +13,10 @@ export type Action =
 			type: AgendaActionsEnum.EDIT_AGENDA
 			payload: AgendaType
 	  }
+	| {
+			type: AgendaActionsEnum.IMPORT_AGENDA
+			payload: string
+	  }
 
 export const addAgenda = (data: AgendaType) => ({
 	type: AgendaActionsEnum.ADD_AGENDA,
@@ -25,5 +29,9 @@ export const removeAgenda = (data: number) => ({
 })
 export const editAgenda = (data: AgendaType) => ({
 	type: AgendaActionsEnum.EDIT_AGENDA,
+	payload: data
+})
+export const importAgenda = (data: string) => ({
+	type: AgendaActionsEnum.IMPORT_AGENDA,
 	payload: data
 })

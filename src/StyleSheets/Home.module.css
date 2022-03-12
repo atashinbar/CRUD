@@ -15,5 +15,31 @@
 
 .table {
 	width: 100%;
-	text-align: left;
+	text-align: center;
+	border: 1px solid #000;
+}
+
+.table tr,
+.table th,
+.table td {
+	border: 1px solid;
+	padding: 10px 0;
+}
+
+.button {
+	background: #000;
+	color: #fff;
+	box-shadow: none;
+	border: none;
+	padding: 6px 17px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.addButton {
+	background: green;
+}
+
+.exportButton {
+	background: rgb(0, 89, 255);
 }
