@@ -1,11 +1,10 @@
-import { Button, Drawer, Space } from 'antd'
+import { Drawer } from 'antd'
 import { useState } from 'react'
 import { connect, useDispatch } from 'react-redux'
 import { removeAgenda } from '../../StateManagement/Actions/AgendaActions'
 import { rootReducerType } from '../../StateManagement/Reducers'
 import { AgendaReducerStateType, AgendaType } from '../../Types/Types'
 import EditAgenda from '../Agenda/EditAgenda'
-import NewAgenda from '../Agenda/NewAgenda'
 
 function TableContent(props: AgendaReducerStateType) {
 	const { data } = props
@@ -60,7 +59,9 @@ function TableContent(props: AgendaReducerStateType) {
 								<td>{item.status}</td>
 								<td>{dateFormat}</td>
 								<td>
-									<button onClick={() => removeAgendaFunction(item.id)}>
+									<button
+										style={{ marginRight: '10px' }}
+										onClick={() => removeAgendaFunction(item.id)}>
 										Remove
 									</button>
 									<button

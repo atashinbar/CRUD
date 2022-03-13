@@ -3,6 +3,7 @@ import { rootReducerType } from '../../StateManagement/Reducers'
 import { AgendaType, EditAgendaPropsType } from '../../Types/Types'
 import { useForm } from 'react-hook-form'
 import { editAgenda } from '../../StateManagement/Actions/AgendaActions'
+import styles from '../../StyleSheets/Form.module.css'
 
 function EditAgenda(props: EditAgendaPropsType) {
 	const { data, agendaId, setVisible } = props
@@ -38,7 +39,7 @@ function EditAgenda(props: EditAgendaPropsType) {
 		setVisible(false)
 	}
 	return (
-		<form onSubmit={handleSubmit(onSubmit)}>
+		<form className={styles.drawerForm} onSubmit={handleSubmit(onSubmit)}>
 			<label>
 				<div>Title:</div>
 				<input

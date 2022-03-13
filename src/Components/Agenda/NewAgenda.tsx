@@ -3,6 +3,7 @@ import { addAgenda } from '../../StateManagement/Actions/AgendaActions'
 import { rootReducerType } from '../../StateManagement/Reducers'
 import { AgendaPropsType } from '../../Types/Types'
 import { useForm } from 'react-hook-form'
+import styles from '../../StyleSheets/Form.module.css'
 
 function NewAgenda(props: AgendaPropsType) {
 	const { setVisible } = props
@@ -31,7 +32,7 @@ function NewAgenda(props: AgendaPropsType) {
 		reset()
 	}
 	return (
-		<form onSubmit={handleSubmit(onSubmit)}>
+		<form className={styles.drawerForm} onSubmit={handleSubmit(onSubmit)}>
 			<label>
 				<div>Title:</div>
 				<input

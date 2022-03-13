@@ -1,4 +1,4 @@
-import { Button, Drawer, Space } from 'antd'
+import { Drawer } from 'antd'
 import { useState } from 'react'
 import NewAgenda from '../../Components/Agenda/NewAgenda'
 import Export from '../../Components/Export/Export'
@@ -7,6 +7,7 @@ import TableContent from '../../Components/TableContent/TableContent'
 import styles from '../../StyleSheets/Home.module.css'
 
 export default function Home() {
+	// Drawer Functionalities
 	const [visible, setVisible] = useState<boolean>(false)
 	const showDrawer = () => {
 		setVisible(true)
@@ -64,12 +65,12 @@ export default function Home() {
 				<table className={styles.table}>
 					<thead>
 						<tr>
-							<th>ID</th>
-							<th>Name</th>
-							<th>Description</th>
-							<th>Status</th>
-							<th>Last Updated</th>
-							<th>Actions</th>
+							<th style={{ width: '5%' }}>ID</th>
+							<th style={{ width: '5%' }}>Name</th>
+							<th style={{ width: '59%' }}>Description</th>
+							<th style={{ width: '5%' }}>Status</th>
+							<th style={{ width: '14%' }}>Last Updated</th>
+							<th style={{ width: '12%' }}>Actions</th>
 						</tr>
 					</thead>
 					<TableContent />

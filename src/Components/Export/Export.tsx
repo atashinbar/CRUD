@@ -5,10 +5,10 @@ import styles from '../../StyleSheets/Home.module.css'
 
 function Export(props: AgendaReducerStateType) {
 	const { data } = props
+
+	// Export JSON file
 	const export2txt = () => {
 		const blob = new Blob([JSON.stringify(data)], { type: 'fileType' })
-		// Create an anchor element and dispatch a click event on it
-		// to trigger a download
 		const a = document.createElement('a')
 		a.download = 'data.json'
 		a.href = window.URL.createObjectURL(blob)
