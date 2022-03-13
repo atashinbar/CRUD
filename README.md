@@ -1,6 +1,6 @@
 ## CRUD Project with React JS
 
-You can perform all Create, Read, Update, Delete operations in this project
+You can perform all Create, Read, Update, Delete operations in this project. This project has the ability to import and export as a JSON file
 
 ## Features
 
